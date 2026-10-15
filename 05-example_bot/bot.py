@@ -72,7 +72,7 @@ load_dotenv()  # RU: подгружаем ключи из .env / EN: load keys f
 PROVIDER = "gemini"
 
 OLLAMA_MODEL = "qwen2.5"          # RU: локальная модель (ollama pull qwen2.5) / EN: local model
-GEMINI_MODEL = "gemini-2.5-flash"  # RU: облачная модель / EN: cloud model
+GEMINI_MODEL = "gemini-3.8-flash"  # RU: облачная модель / EN: cloud model
 USE_JUDGE = False                  # RU: включить проверку судьёй (медленнее) / EN: enable judge check (slower)
 
 # RU: база знаний (RAG): факты из файла рядом со скриптом
