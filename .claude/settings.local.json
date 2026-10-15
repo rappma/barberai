@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(render --version)",
+      "Bash(render whoami *)",
+      "Bash(render projects *)",
+      "Bash(render project *)",
+      "Bash(render --help)",
+      "Bash(render blueprints *)",
+      "Bash(render workspaces *)",
+      "Bash(render workspace *)",
+      "Bash(render ea *)"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "supabase"
+  ]
+}

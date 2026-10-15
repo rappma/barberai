@@ -1,0 +1,19 @@
+# Render Blueprint — фиксирует, что это Python-сервис, и задаёт команды сборки/запуска.
+# Подробности: DEPLOY.md. Ключ GOOGLE_API_KEY нужно ввести в Render вручную (sync: false).
+services:
+  - type: web
+    name: barber-ai
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python 05-example_bot/bot.py
+    envVars:
+      # Версия Python (по желанию можно поменять)
+      - key: PYTHON_VERSION
+        value: "3.12.6"
+      # Ключ модели Gemini — задаётся вручную в дашборде Render, в git не попадает
+      - key: GOOGLE_API_KEY
+        sync: false
+      # Опционально (Шаг 2 DEPLOY.md) — строка подключения Supabase для «долгой памяти»
+      - key: DATABASE_URL
+        sync: false
